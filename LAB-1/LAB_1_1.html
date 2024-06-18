@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab 1-1 Calc</title>
+</head>
+<body>
+	<script type="text/javascript">
+		a = parseInt(prompt("Enter the first number = "));
+		b = parseInt(prompt("Enter the second number = "));
+
+		operation = prompt("Enter operation : 1for+ 2for- 3for* 4for/");
+
+		if (operation==1) {
+			document.write("Sum of a or b =  "+(a+b));
+		}
+		else if (operation==2) {
+			document.write("Subs of a or b = "+(a-b));
+		}
+		else if(operation==3){
+			document.write("Mult of a or b = "+(a*b));
+		}
+		else if (operation==4) {
+			if(b==0){
+				document.write("Enter non zero number")
+			}
+			else{
+				document.write("Divison of a or b = "+(a/b));
+			}
+		}
+
+
+
+	</script>
+
+</body>
+</html>
