@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- 2. Demonstrate the difference between let and var.  -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 10;
+
+        function funForL(){
+            let x = 20;
+            console.log("let",x);
+            if(true){
+                let b=5;
+                console.log("var",b);
+
+            }
+            console.log("var",b);
+
+        }
+        funForL();
+        console.log("var",x);
+
+    </script>
+</body>
+</html>

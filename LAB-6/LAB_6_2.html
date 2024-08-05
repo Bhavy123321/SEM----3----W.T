@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Mouse Event</h1>
+    <p id="mypara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque iure
+        voluptatibus quos impedit voluptates aperiam
+        asperiores adipisci, veritatis, eum totam aspernatur itaque accusamus,
+        natus deserunt suscipit quae nulla explicabo sapiente.</p>
+    <div id="output"></div>
+
+    <script>
+        var Event1 = document.getElementById('mypara');
+        var output = document.getElementById('output');
+
+        function mouseEvents(Event1) {
+            output.innerHTML = `event fired: ${Event1.type}`
+        }
+
+        // Event1.addEventListener('click', mouseEvents);
+        // Event1.addEventListener('dblclick', mouseEvents);
+        // Event1.addEventListener('mousedown', mouseEvents);
+        // Event1.addEventListener('mouseover', mouseEvents);w
+
+    </script>
+</body>
+
+</html>

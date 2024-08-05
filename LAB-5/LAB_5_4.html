@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="username">Username ::</label>
+    <input type="text" id="user" /><br />
+    <br />
+    <label for="password">Password ::</label>
+    <input type="password" id="pass"><br />
+    <br />
+    <label for="password_repeat">Repeat Password ::</label>
+    <input type="password" id="reppass"><br />
+    <br />
+    <label for="age">Age ::</label>
+    <input type="Age" id="Age"><br />
+    <br />
+    <label for="Enrollment">Enrollment Number ::</label>
+    <input type="number" id="Enroll"><br />
+    <br />
+    <label for="Email">Email ::</label>
+    <input type="Email" id="Email"><br />
+    <br />
+    <button class="btn" onclick="handleSubmit()">Submit</button>
+    <div id="successdis"></div>
+    <div id=errordis></div>
+
+    <script>
+        function handleSubmit() {
+            var username = document.getElementById('user').value;
+            var regexp = /^[a-zA-Z\-]+$/;
+
+            if (regexp.test(username)) {
+                document.getElementById('successdis').innerHTML = 'valid';
+            } 
+            else {
+                document.getElementById("errordis").innerHTML = "Invalid";
+            }
+
+        }
+        function handleSubmit() {
+            var password = document.getElementById('pass').value;
+            var regexp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+            if (regexp.test(password)) {
+                document.getElementById('successdis').innerHTML = 'valid';
+            } 
+            else {
+                document.getElementById("errordis").innerHTML = "Invalid";
+            }
+
+        }
+        function handleSubmit() {
+            var password = document.getElementById('reppass').value;
+            var regexp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+            if (regexp.test(password)) {
+                document.getElementById('successdis').innerHTML = 'valid';
+            } 
+            else {
+                document.getElementById("errordis").innerHTML = "Invalid";
+            }
+
+        }
+        function handleSubmit() {
+            var Age = document.getElementById('Age').value;
+            
+
+            if (Age>18) {
+                document.getElementById('successdis').innerHTML = 'valid';
+            } 
+            else {
+                document.getElementById("errordis").innerHTML = "Invalid";
+            }
+
+        }
+        function handleSubmit() {
+            var Enrollment = document.getElementById('Enroll').value;
+            var regexp = /^[0-9]{11}$/;
+
+            if (regexp.test(Enrollment)) {
+                document.getElementById('successdis').innerHTML = 'valid';
+            } 
+            else {
+                document.getElementById("errordis").innerHTML = "Invalid";
+            }
+
+        }
+        function handleSubmit() {
+            var Email = document.getElementById('Email').value;
+            var regexp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (regexp.test(Email)) {
+                document.getElementById('successdis').innerHTML = 'valid';
+            } 
+            else {
+                document.getElementById("errordis").innerHTML = "Invalid";
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

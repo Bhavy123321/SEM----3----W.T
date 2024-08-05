@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #mydiv {
+        height: 400px;
+        width: 300px;
+        background-color: bisque;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="mydiv">Original Div</div>
+    <button id="first" onclick="change()">Change Properties</button>
+    <script>
+        a = document.getElementById("mydiv");
+        changeButton = document.getElementById("first");
+        function change() {
+            a.style.backgroundColor = "aqua";
+        }
+        changeButton.addEventListener("click", change);
+    </script>
+</body>
+
+</html>

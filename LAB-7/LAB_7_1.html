@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- 1. WAP to demonstrate callbacks in JavaScript. -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function myFun(callBackFun) {
+            console.log("Main function called");
+            callBackFun();
+        }
+        myFun(function () {
+            console.log("CallBack function called");
+        })
+    </script>
+
+</body>
+
+</html>

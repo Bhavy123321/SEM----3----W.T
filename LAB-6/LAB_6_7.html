@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="name" placeholder="Enter name" />
+    <button onclick="addName()">Add</button>
+    <div id="display"></div><br />
+    <input type="text" id="updt" /><br />
+    <input type="text" id="updateText" />
+    <button onclick="updateFun()">Update</button>
+    <script>
+        const arr = [];
+        const addName = () => {
+            let x = document.getElementById("name");
+            if (x.value == "") {
+                console.log("invalied input");
+            }
+            else {
+                arr.push(x.value);
+                console.log(arr);
+                x.value = "";
+                displayFun();
+            }
+        }
+        const displayFun = () => {
+            let y = document.getElementById("display");
+            y.innerHTML = "";
+            for (let i = 0; i < arr.length; i++) {
+                y.innerHTML += arr[i] +`<button onclick='deleteFun(${i})'>Delete</button>`+ "<br/>";
+                console.log(arr[i]);
+            }
+        }
+       
+        const updateFun = () => {
+            let update1 = document.getElementById("updt").value;
+            let updateText = document.getElementById("updateText").value;
+            if (update1 >= 0 && update1 < arr.length) {
+                arr[update1]=updateText;
+            }
+            else{
+                input.innerHTML="Invalied input";
+            }
+            displayFun();
+        }
+        const deleteFun= (index)=>{
+           arr.splice(index,1);
+           displayFun();
+        }
+    </script>
+
+</body>
+
+</html>
