@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = [132,343,785,2357,71];
+        arr=(x)=>{
+            for(i=0;i<x.length;i++){
+                document.write(x[i]+",");
+            }
+        };
+        for(let i=0;i<x.length-1;i++){
+            for(let j=0;j<x.length-i-1;j++){
+                if(x[j]>x[j+1]){
+                    let temp = x[j];
+                    x[j]=x[j+1];
+                    x[j+1]=temp;
+                }
+            }
+        }
+        arr(x);
+    </script>
+</body>
+</html>
